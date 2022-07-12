@@ -4,15 +4,19 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import HelloWorld from "./HelloWorld";
+import Greeting from "./Greeting";
+import {Provider} from "react-redux";
+import store from "../redux/configureStore";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HelloWorld />} />
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Greeting/>}/>
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   )
 }
 
