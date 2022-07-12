@@ -6,7 +6,7 @@
 
 > Connection app between a Ruby on Rails back-end and React front-end.
 
-![screenshot](./app/assets/images/app_screenshot.png)
+![screenshot](./app/assets/images/app_screenshot.gif)
 
 ## Built with
 
