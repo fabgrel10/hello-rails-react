@@ -1,10 +1,6 @@
 class V1::GreetingsController < ApplicationController
   def index
-    message = Greeting.find_by(id: rand(1..5)).message
-    render json: { greetings: [
-      {
-        message:
-      }
-    ] }.to_json
+    greetings = Greeting.find(Random.new.rand(1..5))
+    render json: greetings
   end
 end
