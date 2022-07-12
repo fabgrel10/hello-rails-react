@@ -7,16 +7,21 @@ import {
 import Greeting from "./Greeting";
 import {Provider} from "react-redux";
 import store from "../redux/configureStore";
+import "./App.css";
 
 function App() {
   return (
-    <Provider store={store}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Greeting/>}/>
-        </Routes>
-      </BrowserRouter>
-    </Provider>
+    <div className="outer-container">
+      <div className="inner-container">
+        <Provider store={store}>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Greeting/>}/>
+            </Routes>
+          </BrowserRouter>
+        </Provider>
+      </div>
+    </div>
   )
 }
 

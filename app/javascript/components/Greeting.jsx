@@ -12,7 +12,12 @@ function Greeting() {
 
   const message = useSelector((state) => state.greetingsReducer);
   console.log(message);
-  return <React.Fragment>Random Greeting: {message.message}</React.Fragment>;
+  return (
+    <>
+      <h4>Greeting</h4>
+      <h2 className="message">{message.message}</h2>
+    </>
+  );
 }
 
 Greeting.propTypes = {
